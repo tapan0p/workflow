@@ -1,0 +1,44 @@
+/* Custom CSS to completely flatten palette */
+#red-ui-palette-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+    gap: 10px !important;
+    padding: 10px !important;
+}
+
+#red-ui-palette-container .red-ui-palette-node {
+    display: block !important;
+    margin: 5px !important;
+}
+
+#red-ui-palette .red-ui-palette-category {
+    display: none !important;
+}
+
+#red-ui-palette .red-ui-palette-content {
+    display: contents !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Force nodes to appear in flat layout */
+.red-ui-palette-no-categories {
+    display: contents !important;
+}
+
+/* Remove any extra spacing between nodes */
+#red-ui-palette-container > div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure all nodes are visible */
+#red-ui-palette-container .red-ui-palette-node {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Remove category borders */
+.red-ui-palette-category {
+    border: none !important;
+} 
