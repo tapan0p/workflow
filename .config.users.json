@@ -14,19 +14,39 @@
             },
             "tours": {
                 "welcome": "4.0.9"
+            },
+            "dialog": {
+                "export": {
+                    "pretty": true,
+                    "json-view": true
+                }
             }
         },
         "menu-menu-item-sidebar": false,
         "debug": {
             "filter": "filterAll"
         },
-        "menu-menu-item-palette": false,
+        "menu-menu-item-palette": true,
         "edgeConditions": {
             "37562b0e1c1b8177:0:1326fb1765579cc5": {
                 "enabled": true,
                 "useTriplets": true,
                 "logic": "and",
                 "conditions": [
+                    {
+                        "subject": "",
+                        "field": "",
+                        "object": "",
+                        "operator": "eq",
+                        "value": ""
+                    },
+                    {
+                        "subject": "",
+                        "field": "",
+                        "object": "",
+                        "operator": "eq",
+                        "value": ""
+                    },
                     {
                         "subject": "",
                         "field": "",
