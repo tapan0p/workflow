@@ -1,69 +1,59 @@
-# Node-RED
+## How to setup
 
-https://nodered.org
+1. step 1:  
+git clone https://github.com/Suetra-ai/work-flow.git
 
-[![Build Status](https://github.com/node-red/node-red/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/node-red/node-red/actions?query=branch%3Amaster)
+2. step 2:  
+cd work-flow
 
-Low-code programming for event-driven applications.
+3. step 3:  
+npm install
 
-![Node-RED: Low-code programming for event-driven applications](https://nodered.org/images/node-red-screenshot.png)
+4. step 4:  
+npm run build
 
-## Quick Start
-
-Check out https://nodered.org/docs/getting-started/ for full instructions on getting
-started.
-
-1. `sudo npm install -g --unsafe-perm node-red`
-2. `node-red`
-3. Open <http://localhost:1880>
-
-## Getting Help
-
-More documentation can be found [here](https://nodered.org/docs).
-
-For further help, or general discussion, please use the [Node-RED Forum](https://discourse.nodered.org) or [slack team](https://nodered.org/slack).
-
-## Developers
-
-If you want to run the latest code from git, here's how to get started:
-
-1. Clone the code:
-
-        git clone https://github.com/node-red/node-red.git
-        cd node-red
-
-2. Install the node-red dependencies
-
-        npm install
-
-3. Build the code
-
-        npm run build
-
-4. Run
-
-        npm start
-
-## Contributing
-
-Before raising a pull-request, please read our
-[contributing guide](https://github.com/node-red/node-red/blob/master/CONTRIBUTING.md).
-
-This project adheres to the [Contributor Covenant 1.4](http://contributor-covenant.org/version/1/4/).
- By participating, you are expected to uphold this code. Please report unacceptable
- behavior to any of the project's core team at team@nodered.org.
-
-## Authors
-
-Node-RED is a project of the [OpenJS Foundation](http://openjsf.org).
-
-It is maintained by:
-
- * Nick O'Leary [@knolleary](http://twitter.com/knolleary)
- * Dave Conway-Jones [@ceejay](http://twitter.com/ceejay)
- * And many others...
+5. step 5:  
+npm start
 
 
-## Copyright and license
+step 1 to step 4 is one time setup. For running it each time use only step 5.
 
-Copyright OpenJS Foundation and other contributors, https://openjsf.org under [the Apache 2.0 license](LICENSE).
+
+## How to use this tool?
+![1744620374021](image/README/1744620374021.png)
+
+In left sidebar you can find the triplets node.  
+In right sidebar there is a global debuger.
+
+Drag and drop the triplet node in the editor.
+You can collapse both the left and right debugger.
+
+![1744620588028](image/README/1744620588028.png)
+
+You can drag and drop like this also.  
+![1744620644294](image/README/1744620644294.png)
+
+Click on the nodes to open propertysheet.  
+![1744621263505](image/README/1744621263505.png)  
+In the propertysheet right side is node level debugger.
+
+For giving edge condition click on the connection then do right click then click edit connection. 
+![1744621515661](image/README/1744621515661.png)
+
+For import and exporting the flows you can click on the top right menu and select import/export.  
+![1744621979670](image/README/1744621979670.png)
+
+## Importent :
+All the importent json file is saved in 
+path: public\data  
+doxigen_data.json -- contains allthe python tools.  
+history.json -- contains all the node outputs based on node id.  
+triplets_data.json -- contains all the entity and relations of triplets.  
+
+You can modify the json files according to your needs.
+
+In the root directory , flows.json contains all the flows made in editor.  
+path: flows.json
+
+
+
