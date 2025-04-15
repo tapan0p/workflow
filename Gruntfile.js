@@ -166,6 +166,7 @@ module.exports = function(grunt) {
                     "packages/node_modules/@node-red/editor-client/src/js/ui/common/toggleButton.js",
                     "packages/node_modules/@node-red/editor-client/src/js/ui/common/autoComplete.js",
                     "packages/node_modules/@node-red/editor-client/src/js/ui/actions.js",
+                    "packages/node_modules/@node-red/editor-client/src/js/ui/unit-node-toolbar.js",
                     "packages/node_modules/@node-red/editor-client/src/js/ui/deploy.js",
                     "packages/node_modules/@node-red/editor-client/src/js/ui/diagnostics.js",
                     "packages/node_modules/@node-red/editor-client/src/js/ui/diff.js",
