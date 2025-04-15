@@ -26,7 +26,7 @@
         "debug": {
             "filter": "filterAll"
         },
-        "menu-menu-item-palette": true,
+        "menu-menu-item-palette": false,
         "edgeConditions": {
             "37562b0e1c1b8177:0:1326fb1765579cc5": {
                 "enabled": true,
