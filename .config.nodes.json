@@ -150,16 +150,16 @@
                 "module": "node-red",
                 "file": "C:\\Users\\mahat\\Desktop\\ALL\\Health-sutra\\node-red-modified\\node-red\\packages\\node_modules\\@node-red\\nodes\\core\\custom\\edge-editor-adapter.js"
             },
-            "triplets": {
-                "name": "triplets",
+            "unit-node": {
+                "name": "unit-node",
                 "types": [
-                    "triplets"
+                    "unit-node"
                 ],
                 "enabled": true,
                 "local": false,
                 "user": false,
                 "module": "node-red",
-                "file": "C:\\Users\\mahat\\Desktop\\ALL\\Health-sutra\\node-red-modified\\node-red\\packages\\node_modules\\@node-red\\nodes\\core\\custom\\triplets.js"
+                "file": "C:\\Users\\mahat\\Desktop\\ALL\\Health-sutra\\node-red-modified\\node-red\\packages\\node_modules\\@node-red\\nodes\\core\\custom\\unit-node.js"
             },
             "function": {
                 "name": "function",
@@ -479,9 +479,7 @@
         "nodes": {
             "custom-node": {
                 "name": "custom-node",
-                "types": [
-                    "triplets"
-                ],
+                "types": [],
                 "enabled": true,
                 "local": false,
                 "user": false,
