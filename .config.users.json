@@ -55,6 +55,45 @@
                         "value": ""
                     }
                 ]
+            },
+            "bacddafb6f6e58bd:0:70d66f0842863ce9": {
+                "enabled": true,
+                "useTriplets": true,
+                "logic": "and",
+                "conditions": [
+                    {
+                        "subject": "",
+                        "field": "",
+                        "object": "",
+                        "operator": "eq",
+                        "value": ""
+                    }
+                ],
+                "prompt": {
+                    "conditions": [
+                        "THis is the prompt for a condition in a wire",
+                        "second prompt condition"
+                    ]
+                },
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "Diagnosis",
+                            "predicate": "contraindicates",
+                            "object": "Medication",
+                            "operator": "eq",
+                            "value": "\"medc 1\""
+                        },
+                        {
+                            "subject": "Patient",
+                            "predicate": "schedules",
+                            "object": "LabTest",
+                            "operator": "lte",
+                            "value": "\"medic 2\""
+                        }
+                    ]
+                }
             }
         }
     }
