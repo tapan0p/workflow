@@ -71,27 +71,75 @@
                 ],
                 "prompt": {
                     "conditions": [
-                        "THis is the prompt for a condition in a wire",
-                        "second prompt condition"
+                        "this is a new prompt"
                     ]
                 },
                 "logical": {
                     "logic": "and",
                     "conditions": [
                         {
-                            "subject": "Diagnosis",
-                            "predicate": "contraindicates",
-                            "object": "Medication",
-                            "operator": "eq",
-                            "value": "\"medc 1\""
-                        },
-                        {
                             "subject": "Patient",
                             "predicate": "schedules",
                             "object": "LabTest",
-                            "operator": "lte",
-                            "value": "\"medic 2\""
+                            "operator": "eq",
+                            "value": "true"
                         }
+                    ]
+                }
+            },
+            "abbdb244c5de8948:0:0247fba16a2f48d5": {
+                "enabled": false,
+                "logical": {
+                    "logic": "and",
+                    "conditions": []
+                },
+                "prompt": {
+                    "conditions": [
+                        "this is new please be succesffulll my god prompt"
+                    ]
+                },
+                "valueType": "str",
+                "value": "",
+                "operator": "eq",
+                "property": "payload"
+            },
+            "04529efb83af0dd3:0:c3f8e1d1c3aa3538": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "Encounter",
+                            "predicate": "records",
+                            "object": "Diagnosis",
+                            "operator": "eq",
+                            "value": "kkgegrmg"
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "jnffw wjerwnn jNENF"
+                    ]
+                }
+            },
+            "04529efb83af0dd3:0:399d69a9db72e8af": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "FamilyMember",
+                            "predicate": "is_family_member_of",
+                            "object": "Patient",
+                            "operator": "eq",
+                            "value": "NWV"
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "WNVJWNJVN WVKJBKE"
                     ]
                 }
             }
