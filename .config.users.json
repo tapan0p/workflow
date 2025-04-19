@@ -22,7 +22,7 @@
                 }
             }
         },
-        "menu-menu-item-sidebar": false,
+        "menu-menu-item-sidebar": true,
         "debug": {
             "filter": "filterAll"
         },
@@ -176,6 +176,38 @@
                     "conditions": [
                         "This is a prompt for ... node 4",
                         "Second prompt for node 4"
+                    ]
+                }
+            },
+            "3654b480b205a3ae:0:1af2de00c36e4e46": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "Patient",
+                            "predicate": "requests_appointment_with",
+                            "object": "doctorName",
+                            "operator": "eq",
+                            "value": "\"john\""
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "user has confirm their name and made a choise."
+                    ]
+                }
+            },
+            "1af2de00c36e4e46:0:9df2a0f82c2d40cf": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": []
+                },
+                "prompt": {
+                    "conditions": [
+                        "All the information is received from user."
                     ]
                 }
             }
