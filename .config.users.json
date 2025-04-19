@@ -104,27 +104,31 @@
                 "property": "payload"
             },
             "04529efb83af0dd3:0:c3f8e1d1c3aa3538": {
-                "enabled": true,
+                "enabled": false,
                 "logical": {
                     "logic": "and",
                     "conditions": [
                         {
-                            "subject": "Encounter",
-                            "predicate": "records",
-                            "object": "Diagnosis",
+                            "subject": "Allergy",
+                            "predicate": "contraindicates",
+                            "object": "Procedure",
                             "operator": "eq",
-                            "value": "kkgegrmg"
+                            "value": "value1"
                         }
                     ]
                 },
                 "prompt": {
                     "conditions": [
-                        "jnffw wjerwnn jNENF"
+                        "Prompt 1"
                     ]
-                }
+                },
+                "valueType": "str",
+                "value": "",
+                "operator": "eq",
+                "property": "payload"
             },
             "04529efb83af0dd3:0:399d69a9db72e8af": {
-                "enabled": true,
+                "enabled": false,
                 "logical": {
                     "logic": "and",
                     "conditions": [
@@ -133,13 +137,45 @@
                             "predicate": "is_family_member_of",
                             "object": "Patient",
                             "operator": "eq",
-                            "value": "NWV"
+                            "value": "sham"
                         }
                     ]
                 },
                 "prompt": {
                     "conditions": [
-                        "WNVJWNJVN WVKJBKE"
+                        "kkdd infiwd"
+                    ]
+                },
+                "valueType": "str",
+                "value": "",
+                "operator": "eq",
+                "property": "payload"
+            },
+            "c3f8e1d1c3aa3538:0:cf9c8d506bfbdfdf": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "InsurancePlan",
+                            "predicate": "authorizes",
+                            "object": "MedicalDevice",
+                            "operator": "eq",
+                            "value": "\"x-ray\""
+                        },
+                        {
+                            "subject": "Pharmacy",
+                            "predicate": "dispenses",
+                            "object": "Medication",
+                            "operator": "eq",
+                            "value": "\"para\""
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "This is a prompt for ... node 4",
+                        "Second prompt for node 4"
                     ]
                 }
             }
