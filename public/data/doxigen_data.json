@@ -1,0 +1,216 @@
+{
+  "tools": [
+    {
+      "name": "Calculate Fibonacci",
+      "code": "'''\nCalculate Fibonacci sequence up to n numbers\n\nParameters\n----------\nn : int\n    Number of Fibonacci sequence elements to generate\n\nReturns\n-------\nlist\n    List containing the Fibonacci sequence\n'''\ndef fibonacci(n):\n    '''Generate Fibonacci sequence up to n elements'''\n    # Placeholder implementation\n    result = []\n    a, b = 0, 1\n    for _ in range(n):\n        result.append(a)\n        a, b = b, a + b\n    return result # Actual implementation from example kept\n\n# Example usage\n# numbers = fibonacci(10)\n# print(numbers)"
+    },
+    {
+      "name": "Prime Number Checker",
+      "code": "'''\nCheck if a number is prime\n\nParameters\n----------\nnum : int\n    The number to check\n\nReturns\n-------\nbool\n    True if the number is prime, False otherwise\n'''\ndef is_prime(num):\n    '''Check if a number is prime'''\n    # Placeholder implementation\n    if num <= 1: return False\n    if num <= 3: return True\n    if num % 2 == 0 or num % 3 == 0: return False\n    i = 5\n    while i * i <= num:\n        if num % i == 0 or num % (i + 2) == 0: return False\n        i += 6\n    return True # Actual implementation from example kept\n\n# Example usage\n# print(is_prime(17))\n# print(is_prime(20))"
+    },
+    {
+      "name": "Text Analyzer",
+      "code": "'''\nAnalyze text and return various statistics\n\nParameters\n----------\ntext : str\n    The input text to analyze\n\nReturns\n-------\ndict\n    Dictionary containing text statistics like word count, char count, letter frequency\n'''\ndef analyze_text(text):\n    '''Analyze text for various metrics'''\n    # Placeholder implementation\n    if not text: return {'word_count': 0, 'char_count': 0, 'letter_frequency': {}}\n    words = text.split()\n    word_count = len(words)\n    char_count = len(text)\n    letter_frequency = {}\n    for char in text.lower():\n        if char.isalpha():\n            letter_frequency[char] = letter_frequency.get(char, 0) + 1\n    return {'word_count': word_count, 'char_count': char_count, 'letter_frequency': letter_frequency} # Actual implementation from example kept\n\n# Example usage\n# sample_text = 'Hello world, this is a sample text.'\n# result = analyze_text(sample_text)\n# print(result)"
+    },
+    {
+      "name": "Calculate Factorial",
+      "code": "'''\nCalculate the factorial of a non-negative integer\n\nParameters\n----------\nn : int\n    The non-negative integer\n\nReturns\n-------\nint\n    The factorial of n (n!)\n'''\ndef factorial(n):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(factorial(5))"
+    },
+    {
+      "name": "Reverse String",
+      "code": "'''\nReverse a given string\n\nParameters\n----------\ns : str\n    The string to reverse\n\nReturns\n-------\nstr\n    The reversed string\n'''\ndef reverse_string(s):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(reverse_string('hello'))"
+    },
+    {
+      "name": "Check Palindrome",
+      "code": "'''\nCheck if a given string is a palindrome (reads the same forwards and backwards)\n\nParameters\n----------\ns : str\n    The string to check\n\nReturns\n-------\nbool\n    True if the string is a palindrome, False otherwise\n'''\ndef is_palindrome(s):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(is_palindrome('madam'))\n# print(is_palindrome('hello'))"
+    },
+    {
+      "name": "Calculate GCD",
+      "code": "'''\nCalculate the Greatest Common Divisor (GCD) of two integers\n\nParameters\n----------\na : int\n    The first integer\nb : int\n    The second integer\n\nReturns\n-------\nint\n    The GCD of a and b\n'''\ndef calculate_gcd(a, b):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(calculate_gcd(48, 18))"
+    },
+    {
+      "name": "Calculate LCM",
+      "code": "'''\nCalculate the Least Common Multiple (LCM) of two integers\n\nParameters\n----------\na : int\n    The first integer\nb : int\n    The second integer\n\nReturns\n-------\nint\n    The LCM of a and b\n'''\ndef calculate_lcm(a, b):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(calculate_lcm(12, 18))"
+    },
+    {
+      "name": "Sort List",
+      "code": "'''\nSort a list of elements in ascending order\n\nParameters\n----------\ndata : list\n    The list to sort\n\nReturns\n-------\nlist\n    A new list containing the elements sorted in ascending order\n'''\ndef sort_list(data):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(sort_list([3, 1, 4, 1, 5, 9]))"
+    },
+    {
+      "name": "Find Max in List",
+      "code": "'''\nFind the maximum element in a list of numbers\n\nParameters\n----------\nnumbers : list[int | float]\n    The list of numbers\n\nReturns\n-------\nint | float\n    The maximum number in the list\n'''\ndef find_max(numbers):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(find_max([1, 5, 2, 9, 3]))"
+    },
+    {
+      "name": "Find Min in List",
+      "code": "'''\nFind the minimum element in a list of numbers\n\nParameters\n----------\nnumbers : list[int | float]\n    The list of numbers\n\nReturns\n-------\nint | float\n    The minimum number in the list\n'''\ndef find_min(numbers):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(find_min([1, 5, 2, 9, 3]))"
+    },
+    {
+      "name": "Remove Duplicates from List",
+      "code": "'''\nRemove duplicate elements from a list while preserving order\n\nParameters\n----------\ndata : list\n    The list containing potential duplicates\n\nReturns\n-------\nlist\n    A new list with duplicates removed\n'''\ndef remove_duplicates(data):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(remove_duplicates([1, 2, 2, 3, 1, 4, 4]))"
+    },
+    {
+      "name": "Count Word Occurrences",
+      "code": "'''\nCount the occurrences of each word in a text\n\nParameters\n----------\ntext : str\n    The input text\n\nReturns\n-------\ndict\n    A dictionary where keys are words and values are their counts\n'''\ndef count_word_occurrences(text):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(count_word_occurrences('this is a test this is only a test'))"
+    },
+    {
+      "name": "Convert Celsius to Fahrenheit",
+      "code": "'''\nConvert temperature from Celsius to Fahrenheit\n\nParameters\n----------\ncelsius : float\n    Temperature in degrees Celsius\n\nReturns\n-------\nfloat\n    Temperature in degrees Fahrenheit\n'''\ndef celsius_to_fahrenheit(celsius):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(celsius_to_fahrenheit(0))"
+    },
+    {
+      "name": "Convert Fahrenheit to Celsius",
+      "code": "'''\nConvert temperature from Fahrenheit to Celsius\n\nParameters\n----------\nfahrenheit : float\n    Temperature in degrees Fahrenheit\n\nReturns\n-------\nfloat\n    Temperature in degrees Celsius\n'''\ndef fahrenheit_to_celsius(fahrenheit):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(fahrenheit_to_celsius(32))"
+    },
+    {
+      "name": "Check if Even",
+      "code": "'''\nCheck if a given integer is even\n\nParameters\n----------\nnum : int\n    The integer to check\n\nReturns\n-------\nbool\n    True if the number is even, False otherwise\n'''\ndef is_even(num):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(is_even(4))\n# print(is_even(5))"
+    },
+    {
+      "name": "Generate Random Number",
+      "code": "'''\nGenerate a random integer within a specified range (inclusive)\n\nParameters\n----------\nmin_val : int\n    The minimum value of the range\nmax_val : int\n    The maximum value of the range\n\nReturns\n-------\nint\n    A random integer between min_val and max_val\n'''\ndef generate_random_number(min_val, max_val):\n    # Placeholder function definition\n    # import random\n    # return random.randint(min_val, max_val)\n    pass\n\n# Example usage (placeholder)\n# print(generate_random_number(1, 10))"
+    },
+    {
+      "name": "Calculate List Average",
+      "code": "'''\nCalculate the average (mean) of a list of numbers\n\nParameters\n----------\nnumbers : list[int | float]\n    The list of numbers\n\nReturns\n-------\nfloat\n    The average of the numbers in the list\n'''\ndef calculate_average(numbers):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(calculate_average([1, 2, 3, 4, 5]))"
+    },
+    {
+      "name": "Check Leap Year",
+      "code": "'''\nCheck if a given year is a leap year\n\nParameters\n----------\nyear : int\n    The year to check\n\nReturns\n-------\nbool\n    True if the year is a leap year, False otherwise\n'''\ndef is_leap_year(year):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(is_leap_year(2020))\n# print(is_leap_year(2021))"
+    },
+    {
+      "name": "Binary Search",
+      "code": "'''\nPerform a binary search on a sorted list to find the index of a target element\n\nParameters\n----------\nsorted_list : list\n    The sorted list to search within\ntarget : any\n    The element to search for\n\nReturns\n-------\nint\n    The index of the target element if found, otherwise -1\n'''\ndef binary_search(sorted_list, target):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(binary_search([1, 3, 5, 7, 9], 5))"
+    },
+    {
+      "name": "Merge Sorted Lists",
+      "code": "'''\nMerge two sorted lists into a single sorted list\n\nParameters\n----------\nlist1 : list\n    The first sorted list\nlist2 : list\n    The second sorted list\n\nReturns\n-------\nlist\n    A new list containing all elements from list1 and list2, sorted\n'''\ndef merge_sorted_lists(list1, list2):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(merge_sorted_lists([1, 3, 5], [2, 4, 6]))"
+    },
+    {
+      "name": "Power Calculation",
+      "code": "'''\nCalculate the power of a base number raised to an exponent\n\nParameters\n----------\nbase : float | int\n    The base number\nexponent : float | int\n    The exponent\n\nReturns\n-------\nfloat | int\n    The result of base raised to the power of exponent\n'''\ndef calculate_power(base, exponent):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(calculate_power(2, 3))"
+    },
+    {
+      "name": "Square Root Calculation",
+      "code": "'''\nCalculate the square root of a non-negative number\n\nParameters\n----------\nnum : float | int\n    The non-negative number\n\nReturns\n-------\nfloat\n    The square root of the number\n'''\ndef calculate_sqrt(num):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(calculate_sqrt(16))"
+    },
+    {
+      "name": "Validate Email Format",
+      "code": "'''\nValidate if a string follows a basic email format\n\nParameters\n----------\nemail : str\n    The string to validate as an email address\n\nReturns\n-------\nbool\n    True if the format seems valid, False otherwise\n'''\ndef validate_email(email):\n    # Placeholder function definition\n    # Note: Real email validation is complex\n    pass\n\n# Example usage (placeholder)\n# print(validate_email('test@example.com'))\n# print(validate_email('invalid-email'))"
+    },
+    {
+      "name": "Count Vowels",
+      "code": "'''\nCount the number of vowels (a, e, i, o, u) in a string\n\nParameters\n----------\ns : str\n    The input string (case-insensitive)\n\nReturns\n-------\nint\n    The total count of vowels in the string\n'''\ndef count_vowels(s):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(count_vowels('Hello World'))"
+    },
+    {
+      "name": "Flatten List",
+      "code": "'''\nFlatten a list of lists into a single list\n\nParameters\n----------\nnested_list : list[list]\n    The list containing sublists\n\nReturns\n-------\nlist\n    A single list containing all elements from the sublists\n'''\ndef flatten_list(nested_list):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(flatten_list([[1, 2], [3, 4], [5]]))"
+    },
+    {
+      "name": "Calculate Median",
+      "code": "'''\nCalculate the median value of a list of numbers\n\nParameters\n----------\nnumbers : list[int | float]\n    The list of numbers\n\nReturns\n-------\nfloat | int\n    The median value of the list\n'''\ndef calculate_median(numbers):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(calculate_median([1, 3, 2, 4, 5]))\n# print(calculate_median([1, 3, 2, 4]))"
+    },
+    {
+      "name": "Calculate Mode",
+      "code": "'''\nCalculate the mode(s) (most frequent value(s)) of a list of elements\n\nParameters\n----------\ndata : list\n    The list of elements\n\nReturns\n-------\nlist\n    A list containing the mode(s) of the input list\n'''\ndef calculate_mode(data):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(calculate_mode([1, 2, 2, 3, 3, 3, 4]))"
+    },
+    {
+      "name": "Get File Extension",
+      "code": "'''\nExtract the file extension from a filename string\n\nParameters\n----------\nfilename : str\n    The name of the file (e.g., 'document.txt')\n\nReturns\n-------\nstr | None\n    The file extension (e.g., 'txt') without the dot, or None if no extension exists\n'''\ndef get_file_extension(filename):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(get_file_extension('myfile.txt'))\n# print(get_file_extension('archive.tar.gz'))\n# print(get_file_extension('noextension'))"
+    },
+    {
+      "name": "Read Text File",
+      "code": "'''\nRead the entire content of a text file into a string\n\nParameters\n----------\nfilepath : str\n    The path to the text file\nencoding : str, optional\n    The encoding of the file (default is 'utf-8')\n\nReturns\n-------\nstr\n    The content of the file as a single string\n'''\ndef read_text_file(filepath, encoding='utf-8'):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# content = read_text_file('myfile.txt')\n# if content:\n#    print(content)"
+    },
+    {
+      "name": "Write Text File",
+      "code": "'''\nWrite a string to a text file, overwriting if it exists\n\nParameters\n----------\nfilepath : str\n    The path to the text file\ncontent : str\n    The string content to write\nencoding : str, optional\n    The encoding to use (default is 'utf-8')\n\nReturns\n-------\nNone\n'''\ndef write_text_file(filepath, content, encoding='utf-8'):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# write_text_file('output.txt', 'Hello there!')"
+    },
+    {
+      "name": "Append Text File",
+      "code": "'''\nAppend a string to the end of a text file\n\nParameters\n----------\nfilepath : str\n    The path to the text file\ncontent : str\n    The string content to append\nencoding : str, optional\n    The encoding to use (default is 'utf-8')\n\nReturns\n-------\nNone\n'''\ndef append_text_file(filepath, content, encoding='utf-8'):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# append_text_file('log.txt', 'New entry\\n')"
+    },
+    {
+      "name": "Check File Existence",
+      "code": "'''\nCheck if a file or directory exists at the specified path\n\nParameters\n----------\npath : str\n    The file or directory path to check\n\nReturns\n-------\nbool\n    True if the path exists, False otherwise\n'''\ndef check_path_exists(path):\n    # Placeholder function definition\n    # import os\n    # return os.path.exists(path)\n    pass\n\n# Example usage (placeholder)\n# print(check_path_exists('myfile.txt'))"
+    },
+    {
+      "name": "List Directory Contents",
+      "code": "'''\nList the names of files and subdirectories within a given directory\n\nParameters\n----------\ndir_path : str\n    The path to the directory\n\nReturns\n-------\nlist[str]\n    A list of names of items within the directory\n'''\ndef list_directory(dir_path):\n    # Placeholder function definition\n    # import os\n    # return os.listdir(dir_path)\n    pass\n\n# Example usage (placeholder)\n# print(list_directory('.'))"
+    },
+    {
+      "name": "Get Current Timestamp",
+      "code": "'''\nGet the current date and time as a datetime object\n\nParameters\n----------\nNone\n\nReturns\n-------\ndatetime\n    A datetime object representing the current date and time\n'''\ndef get_current_timestamp():\n    # Placeholder function definition\n    # import datetime\n    # return datetime.datetime.now()\n    pass\n\n# Example usage (placeholder)\n# print(get_current_timestamp())"
+    },
+    {
+      "name": "Format Datetime",
+      "code": "'''\nFormat a datetime object into a string according to a specified format\n\nParameters\n----------\ndt_obj : datetime\n    The datetime object to format\nformat_str : str\n    The format string (e.g., '%Y-%m-%d %H:%M:%S')\n\nReturns\n-------\nstr\n    The formatted datetime string\n'''\ndef format_datetime(dt_obj, format_str):\n    # Placeholder function definition\n    # return dt_obj.strftime(format_str)\n    pass\n\n# Example usage (placeholder)\n# import datetime\n# now = datetime.datetime.now()\n# print(format_datetime(now, '%Y-%m-%d'))"
+    },
+    {
+      "name": "Parse Datetime String",
+      "code": "'''\nParse a string representing a date and time into a datetime object\n\nParameters\n----------\ndt_str : str\n    The string to parse\nformat_str : str\n    The format string that dt_str follows\n\nReturns\n-------\ndatetime\n    The parsed datetime object\n'''\ndef parse_datetime(dt_str, format_str):\n    # Placeholder function definition\n    # import datetime\n    # return datetime.datetime.strptime(dt_str, format_str)\n    pass\n\n# Example usage (placeholder)\n# print(parse_datetime('2023-10-27', '%Y-%m-%d'))"
+    },
+    {
+      "name": "Calculate Date Difference",
+      "code": "'''\nCalculate the difference between two datetime objects\n\nParameters\n----------\ndate1 : datetime\n    The first datetime object\ndate2 : datetime\n    The second datetime object\n\nReturns\n-------\ntimedelta\n    A timedelta object representing the difference between date1 and date2\n'''\ndef calculate_date_difference(date1, date2):\n    # Placeholder function definition\n    # return date1 - date2\n    pass\n\n# Example usage (placeholder)\n# import datetime\n# d1 = datetime.datetime(2023, 10, 27)\n# d2 = datetime.datetime(2023, 10, 20)\n# print(calculate_date_difference(d1, d2))"
+    },
+    {
+      "name": "Shuffle List",
+      "code": "'''\nRandomly shuffle the elements of a list in place or return a new shuffled list\n\nParameters\n----------\ndata : list\n    The list to shuffle\nin_place : bool, optional\n    If True, shuffle the list in place and return None. If False (default), return a new shuffled list.\n\nReturns\n-------\nlist | None\n    A new shuffled list if in_place is False, otherwise None\n'''\ndef shuffle_list(data, in_place=False):\n    # Placeholder function definition\n    # import random\n    # if in_place:\n    #    random.shuffle(data)\n    #    return None\n    # else:\n    #    shuffled_data = data[:]\n    #    random.shuffle(shuffled_data)\n    #    return shuffled_data\n    pass\n\n# Example usage (placeholder)\n# my_list = [1, 2, 3, 4, 5]\n# print(shuffle_list(my_list))\n# print(my_list) # Unchanged\n# shuffle_list(my_list, in_place=True)\n# print(my_list) # Changed"
+    },
+    {
+      "name": "Generate UUID",
+      "code": "'''\nGenerate a Universally Unique Identifier (UUID)\n\nParameters\n----------\nNone\n\nReturns\n-------\nstr\n    A unique UUID string (typically UUID4)\n'''\ndef generate_uuid():\n    # Placeholder function definition\n    # import uuid\n    # return str(uuid.uuid4())\n    pass\n\n# Example usage (placeholder)\n# print(generate_uuid())"
+    },
+    {
+      "name": "Dictionary Key Check",
+      "code": "'''\nCheck if a key exists within a dictionary\n\nParameters\n----------\ndict_obj : dict\n    The dictionary to check\nkey : any\n    The key to look for\n\nReturns\n-------\nbool\n    True if the key exists in the dictionary, False otherwise\n'''\ndef check_dict_key(dict_obj, key):\n    # Placeholder function definition\n    # return key in dict_obj\n    pass\n\n# Example usage (placeholder)\n# my_dict = {'a': 1, 'b': 2}\n# print(check_dict_key(my_dict, 'a'))\n# print(check_dict_key(my_dict, 'c'))"
+    },
+    {
+      "name": "Merge Dictionaries",
+      "code": "'''\nMerge two dictionaries. If keys overlap, values from the second dictionary take precedence.\n\nParameters\n----------\ndict1 : dict\n    The first dictionary\ndict2 : dict\n    The second dictionary\n\nReturns\n-------\ndict\n    A new dictionary containing merged key-value pairs\n'''\ndef merge_dictionaries(dict1, dict2):\n    # Placeholder function definition\n    # merged = dict1.copy()\n    # merged.update(dict2)\n    # return merged\n    pass\n\n# Example usage (placeholder)\n# d1 = {'a': 1, 'b': 2}\n# d2 = {'b': 3, 'c': 4}\n# print(merge_dictionaries(d1, d2))"
+    },
+    {
+      "name": "Set Intersection",
+      "code": "'''\nFind the intersection (common elements) of two sets\n\nParameters\n----------\nset1 : set\n    The first set\nset2 : set\n    The second set\n\nReturns\n-------\nset\n    A new set containing elements present in both set1 and set2\n'''\ndef set_intersection(set1, set2):\n    # Placeholder function definition\n    # return set1.intersection(set2)\n    pass\n\n# Example usage (placeholder)\n# s1 = {1, 2, 3, 4}\n# s2 = {3, 4, 5, 6}\n# print(set_intersection(s1, s2))"
+    },
+    {
+      "name": "Set Union",
+      "code": "'''\nFind the union (all unique elements) of two sets\n\nParameters\n----------\nset1 : set\n    The first set\nset2 : set\n    The second set\n\nReturns\n-------\nset\n    A new set containing all unique elements from set1 and set2\n'''\ndef set_union(set1, set2):\n    # Placeholder function definition\n    # return set1.union(set2)\n    pass\n\n# Example usage (placeholder)\n# s1 = {1, 2, 3, 4}\n# s2 = {3, 4, 5, 6}\n# print(set_union(s1, s2))"
+    },
+    {
+      "name": "Set Difference",
+      "code": "'''\nFind the difference between two sets (elements in the first set but not in the second)\n\nParameters\n----------\nset1 : set\n    The first set\nset2 : set\n    The second set\n\nReturns\n-------\nset\n    A new set containing elements present in set1 but not in set2\n'''\ndef set_difference(set1, set2):\n    # Placeholder function definition\n    # return set1.difference(set2)\n    pass\n\n# Example usage (placeholder)\n# s1 = {1, 2, 3, 4}\n# s2 = {3, 4, 5, 6}\n# print(set_difference(s1, s2))"
+    },
+    {
+      "name": "Convert Decimal to Binary",
+      "code": "'''\nConvert a non-negative decimal integer to its binary string representation\n\nParameters\n----------\ndecimal_num : int\n    The non-negative decimal integer\n\nReturns\n-------\nstr\n    The binary representation as a string (e.g., '1011')\n'''\ndef decimal_to_binary(decimal_num):\n    # Placeholder function definition\n    # return bin(decimal_num)[2:]\n    pass\n\n# Example usage (placeholder)\n# print(decimal_to_binary(11))"
+    },
+    {
+      "name": "Convert Binary to Decimal",
+      "code": "'''\nConvert a binary string representation to its decimal integer value\n\nParameters\n----------\nbinary_str : str\n    The binary representation string (e.g., '1011')\n\nReturns\n-------\nint\n    The decimal integer value\n'''\ndef binary_to_decimal(binary_str):\n    # Placeholder function definition\n    # return int(binary_str, 2)\n    pass\n\n# Example usage (placeholder)\n# print(binary_to_decimal('1011'))"
+    },
+    {
+      "name": "Calculate Standard Deviation",
+      "code": "'''\nCalculate the population standard deviation of a list of numbers\n\nParameters\n----------\nnumbers : list[int | float]\n    The list of numbers (population)\n\nReturns\n-------\nfloat\n    The population standard deviation\n'''\ndef calculate_std_dev(numbers):\n    # Placeholder function definition\n    # import statistics\n    # return statistics.pstdev(numbers)\n    pass\n\n# Example usage (placeholder)\n# print(calculate_std_dev([1, 2, 3, 4, 5]))"
+    },
+    {
+      "name": "Simple Caesar Cipher Encrypt",
+      "code": "'''\nEncrypt a string using a simple Caesar cipher with a given shift (letters only)\n\nParameters\n----------\nplaintext : str\n    The string to encrypt\nshift : int\n    The number of positions to shift letters (positive for right shift)\n\nReturns\n-------\nstr\n    The encrypted ciphertext\n'''\ndef caesar_encrypt(plaintext, shift):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(caesar_encrypt('HELLO', 3))"
+    },
+    {
+      "name": "Simple Caesar Cipher Decrypt",
+      "code": "'''\nDecrypt a string encrypted with a simple Caesar cipher using a given shift (letters only)\n\nParameters\n----------\nciphertext : str\n    The string to decrypt\nshift : int\n    The number of positions used for the original shift\n\nReturns\n-------\nstr\n    The decrypted plaintext\n'''\ndef caesar_decrypt(ciphertext, shift):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(caesar_decrypt('KHOOR', 3))"
+    },
+    {
+      "name": "Parse URL Components",
+      "code": "'''\nParse a URL string into its components (scheme, netloc, path, params, query, fragment)\n\nParameters\n----------\nurl_string : str\n    The URL string to parse\n\nReturns\n-------\ndict\n    A dictionary containing the parsed URL components\n'''\ndef parse_url(url_string):\n    # Placeholder function definition\n    # from urllib.parse import urlparse\n    # parsed = urlparse(url_string)\n    # return parsed._asdict()\n    pass\n\n# Example usage (placeholder)\n# print(parse_url('https://www.example.com/path?query=1#fragment'))"
+    },
+    {
+      "name": "Generate Slug",
+      "code": "'''\nGenerate a URL-friendly slug from a string (lowercase, spaces to hyphens, remove invalid chars)\n\nParameters\n----------\ntext : str\n    The input string\n\nReturns\n-------\nstr\n    The generated slug string\n'''\ndef generate_slug(text):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(generate_slug('This is a Test Title!'))"
+    },
+    {
+      "name": "Calculate Distance (2D)",
+      "code": "'''\nCalculate the Euclidean distance between two points in a 2D plane\n\nParameters\n----------\npoint1 : tuple[float, float] | list[float, float]\n    The coordinates (x1, y1) of the first point\npoint2 : tuple[float, float] | list[float, float]\n    The coordinates (x2, y2) of the second point\n\nReturns\n-------\nfloat\n    The Euclidean distance between the two points\n'''\ndef calculate_distance_2d(point1, point2):\n    # Placeholder function definition\n    # import math\n    # return math.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)\n    pass\n\n# Example usage (placeholder)\n# p1 = (0, 0)\n# p2 = (3, 4)\n# print(calculate_distance_2d(p1, p2))"
+    }
+  ]
+}

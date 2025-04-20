@@ -1,0 +1,20 @@
+{
+  "entity_types": {
+    "aHuman": [],
+    "AIENgineer": [],
+    "person1": [],
+    "person2": []
+  },
+  "predicates": {
+    "hasAJob": {
+      "subject_type": "aHuman",
+      "object_type": "AIENgineer",
+      "attributes": []
+    },
+    "relation1": {
+      "subject_type": "person1",
+      "object_type": "person2",
+      "attributes": []
+    }
+  }
+}

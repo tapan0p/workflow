@@ -1,0 +1,679 @@
+{
+  "entity_types": {
+    "Patient": [
+      "first_name", 
+      "last_name",
+      "date_of_birth",
+      "primary_phone",
+      "email",
+      "medicare_id_number",
+      "insurance_policy_number",
+      "blood_type",
+      "gender",
+      "emergency_contact_name",
+      "emergency_contact_phone",
+      "preferred_language",
+      "marital_status",
+      "occupation",
+      "primary_care_provider_id"
+    ],
+    "Provider": [
+      "name",
+      "provider_type",
+      "specialty",
+      "practitioner_name",
+      "primary_phone",
+      "city",
+      "state",
+      "npi_number",
+      "accepting_new_patients",
+      "email",
+      "website",
+      "hours_of_operation",
+      "telehealth_available",
+      "languages_spoken"
+    ],
+    "Pharmacy": [
+      "name",
+      "primary_phone",
+      "city",
+      "state",
+      "hours_of_operation",
+      "delivery_available",
+      "is_24_hour",
+      "accepts_online_refills",
+      "website"
+    ],
+    "TransportationAgency": [
+      "name",
+      "service_type",
+      "primary_phone",
+      "website",
+      "wheelchair_accessible",
+      "languages_supported",
+      "service_radius",
+      "operating_hours",
+      "advance_booking_required"
+    ],
+    "Medication": [
+      "medication_name",
+      "rx_number",
+      "dosage",
+      "form",
+      "frequency",
+      "prescribed_date",
+      "prescribed_quantity",
+      "remaining_refills",
+      "generic_alternative",
+      "controlled_substance_class",
+      "instructions",
+      "active_ingredient"
+    ],
+    "Location": [
+      "street_address",
+      "city",
+      "state",
+      "postal_code",
+      "location_description",
+      "latitude",
+      "longitude",
+      "accessibility_features",
+      "parking_available",
+      "public_transport_access"
+    ],
+    "Diagnosis": [
+      "icd_code",
+      "diagnosis_name",
+      "diagnosis_date",
+      "diagnosis_status",
+      "notes",
+      "severity",
+      "chronic_condition"
+    ],
+    "Procedure": [
+      "cpt_code",
+      "procedure_name",
+      "procedure_date",
+      "notes",
+      "outcome",
+      "performer_id",
+      "anesthesia_used",
+      "duration_minutes"
+    ],
+    "LabTest": [
+      "loinc_code",
+      "test_name",
+      "ordered_date",
+      "sample_collected_date",
+      "result_date",
+      "result_value",
+      "reference_range",
+      "abnormal_flag",
+      "lab_location"
+    ],
+    "Allergy": [
+      "allergen",
+      "reaction",
+      "severity",
+      "onset_date",
+      "allergy_type",
+      "notes"
+    ],
+    "Immunization": [
+      "vaccine_name",
+      "cvx_code",
+      "administered_date",
+      "dose_number",
+      "manufacturer",
+      "lot_number",
+      "expiration_date",
+      "administering_provider_id",
+      "injection_site"
+    ],
+    "InsurancePlan": [
+      "insurance_company",
+      "plan_name",
+      "plan_type",
+      "group_number",
+      "member_services_phone",
+      "prior_auth_phone",
+      "coverage_start_date",
+      "coverage_end_date",
+      "formulary_tier"
+    ],
+    "MedicalDevice": [
+      "device_name",
+      "device_type",
+      "manufacturer",
+      "model_number",
+      "serial_number",
+      "implant_date",
+      "expiration_date",
+      "status"
+    ],
+    "Prescription": [
+      "prescription_id",
+      "written_date",
+      "days_supply",
+      "dispense_as_written",
+      "notes",
+      "status",
+      "refills_authorized"
+    ],
+    "CarePlan": [
+      "plan_id",
+      "plan_name",
+      "created_date",
+      "last_updated",
+      "status",
+      "goal",
+      "instructions",
+      "start_date",
+      "end_date",
+      "review_date"
+    ],
+    "Encounter": [
+      "encounter_id",
+      "encounter_type",
+      "encounter_date",
+      "chief_complaint",
+      "duration_minutes",
+      "discharge_disposition",
+      "follow_up_instructions",
+      "telehealth"
+    ],
+    "Document": [
+      "document_id",
+      "document_type",
+      "creation_date",
+      "title",
+      "author_id",
+      "description",
+      "file_format",
+      "file_size",
+      "storage_location"
+    ],
+    "FamilyMember": [
+      "relationship_to_patient",
+      "first_name",
+      "last_name",
+      "date_of_birth",
+      "significant_health_conditions",
+      "is_emergency_contact",
+      "living_status"
+    ],
+    "SocialDeterminant": [
+      "determinant_type",
+      "assessment_date",
+      "status",
+      "barrier_description",
+      "intervention_needed",
+      "priority_level"
+    ]
+  },
+  "predicates": {
+    "requests_appointment_with": {
+      "subject_type": "Patient",
+      "object_type": "Provider",
+      "attributes": [
+        "requested_date",
+        "requested_time",
+        "reason_for_visit",
+        "urgency",
+        "status",
+        "preferred_visit_type",
+        "notes",
+        "requested_by"
+      ]
+    },
+    "has_appointment_with": {
+      "subject_type": "Patient",
+      "object_type": "Provider",
+      "attributes": [
+        "scheduled_datetime",
+        "reason_for_visit",
+        "confirmation_number",
+        "status",
+        "appointment_type",
+        "duration_minutes",
+        "check_in_time",
+        "copay_amount",
+        "prior_authorization_required"
+      ]
+    },
+    "requests_transportation": {
+      "subject_type": "Patient",
+      "object_type": "Location",
+      "attributes": [
+        "pickup_datetime",
+        "pickup_location_description",
+        "dropoff_location_description",
+        "preferred_agency_name",
+        "special_instructions",
+        "status",
+        "travel_purpose",
+        "requested_by",
+        "request_date"
+      ]
+    },
+    "has_transportation_with": {
+      "subject_type": "Patient",
+      "object_type": "TransportationAgency",
+      "attributes": [
+        "pickup_datetime",
+        "pickup_location_description",
+        "dropoff_location_description",
+        "booking_reference",
+        "status",
+        "driver_name",
+        "driver_phone",
+        "estimated_arrival_time",
+        "vehicle_description",
+        "cancellation_policy"
+      ]
+    },
+    "requests_refill_for": {
+      "subject_type": "Patient",
+      "object_type": "Medication",
+      "attributes": [
+        "pharmacy_name",
+        "pickup_or_delivery",
+        "status",
+        "requested_date",
+        "requested_by",
+        "urgent",
+        "requested_days_supply",
+        "notes"
+      ]
+    },
+    "has_refill_status_at": {
+      "subject_type": "Medication",
+      "object_type": "Pharmacy",
+      "attributes": [
+        "refill_status",
+        "ready_datetime",
+        "issue_description",
+        "price",
+        "covered_by_insurance",
+        "patient_cost",
+        "notification_sent",
+        "notification_method",
+        "days_supply"
+      ]
+    },
+    "has_insurance_with": {
+      "subject_type": "Patient",
+      "object_type": "InsurancePlan",
+      "attributes": [
+        "policy_number",
+        "group_number",
+        "is_primary",
+        "relationship_to_subscriber",
+        "effective_date",
+        "termination_date",
+        "copay_amount",
+        "deductible_amount",
+        "deductible_met_amount",
+        "out_of_pocket_max",
+        "verification_date"
+      ]
+    },
+    "accepts_insurance": {
+      "subject_type": "Provider",
+      "object_type": "InsurancePlan",
+      "attributes": [
+        "verification_status",
+        "in_network",
+        "contract_effective_date",
+        "special_billing_instructions",
+        "preauthorization_required_for"
+      ]
+    },
+    "is_located_at": {
+      "subject_type": ["Provider", "Pharmacy", "Patient"],
+      "object_type": "Location",
+      "attributes": [
+        "primary_location",
+        "location_type",
+        "start_date",
+        "end_date"
+      ]
+    },
+    "is_diagnosed_with": {
+      "subject_type": "Patient",
+      "object_type": "Diagnosis",
+      "attributes": [
+        "diagnosed_date",
+        "diagnosing_provider_id",
+        "diagnosis_status",
+        "acuity",
+        "notes",
+        "follow_up_required",
+        "supporting_evidence"
+      ]
+    },
+    "underwent": {
+      "subject_type": "Patient",
+      "object_type": "Procedure",
+      "attributes": [
+        "procedure_date",
+        "performing_provider_id",
+        "facility_id",
+        "outcome",
+        "complications",
+        "follow_up_required",
+        "anesthesia_used"
+      ]
+    },
+    "had_lab_test": {
+      "subject_type": "Patient",
+      "object_type": "LabTest",
+      "attributes": [
+        "ordering_provider_id",
+        "order_date",
+        "collection_date",
+        "result_date",
+        "result_status",
+        "lab_id",
+        "fasting_status",
+        "specimen_type"
+      ]
+    },
+    "has_allergy_to": {
+      "subject_type": "Patient",
+      "object_type": "Allergy",
+      "attributes": [
+        "identified_date",
+        "reaction_severity",
+        "notes",
+        "identified_by_provider_id",
+        "active_status"
+      ]
+    },
+    "received": {
+      "subject_type": "Patient",
+      "object_type": "Immunization",
+      "attributes": [
+        "administration_date",
+        "administered_by_provider_id",
+        "facility_id",
+        "consent_obtained",
+        "adverse_reaction",
+        "series_complete"
+      ]
+    },
+    "uses": {
+      "subject_type": "Patient",
+      "object_type": "MedicalDevice",
+      "attributes": [
+        "start_date",
+        "prescribed_by_provider_id",
+        "reason",
+        "notes",
+        "status",
+        "last_serviced_date"
+      ]
+    },
+    "was_prescribed": {
+      "subject_type": "Medication",
+      "object_type": "Prescription",
+      "attributes": [
+        "prescribed_date",
+        "prescribed_by_provider_id",
+        "reason_for_prescription",
+        "stop_date",
+        "instructions"
+      ]
+    },
+    "takes": {
+      "subject_type": "Patient",
+      "object_type": "Medication",
+      "attributes": [
+        "start_date",
+        "end_date",
+        "prescribed_by_provider_id",
+        "reason",
+        "adherence_level",
+        "notes",
+        "active_status",
+        "self_reported"
+      ]
+    },
+    "follows": {
+      "subject_type": "Patient",
+      "object_type": "CarePlan",
+      "attributes": [
+        "start_date",
+        "end_date",
+        "created_by_provider_id",
+        "status",
+        "progress_notes",
+        "compliance_level"
+      ]
+    },
+    "attended": {
+      "subject_type": "Patient",
+      "object_type": "Encounter",
+      "attributes": [
+        "encounter_date",
+        "provider_id",
+        "facility_id",
+        "reason",
+        "outcome",
+        "copay_collected",
+        "arrival_status"
+      ]
+    },
+    "created": {
+      "subject_type": ["Provider", "Patient"],
+      "object_type": "Document",
+      "attributes": [
+        "creation_date",
+        "purpose",
+        "context",
+        "status"
+      ]
+    },
+    "refers_to": {
+      "subject_type": "Provider",
+      "object_type": "Provider",
+      "attributes": [
+        "referral_date",
+        "reason",
+        "urgency",
+        "status",
+        "notes",
+        "authorization_number",
+        "expiration_date"
+      ]
+    },
+    "orders": {
+      "subject_type": "Provider",
+      "object_type": ["Medication", "LabTest", "Procedure", "MedicalDevice"],
+      "attributes": [
+        "order_date",
+        "reason",
+        "urgency",
+        "status",
+        "notes",
+        "frequency",
+        "duration"
+      ]
+    },
+    "monitors": {
+      "subject_type": "Provider",
+      "object_type": ["CarePlan", "Diagnosis"],
+      "attributes": [
+        "start_date",
+        "frequency",
+        "last_review_date",
+        "notes",
+        "status"
+      ]
+    },
+    "documents": {
+      "subject_type": "Document",
+      "object_type": ["Encounter", "Procedure", "Diagnosis", "LabTest"],
+      "attributes": [
+        "documentation_date",
+        "document_type",
+        "created_by_id"
+      ]
+    },
+    "is_family_member_of": {
+      "subject_type": "FamilyMember",
+      "object_type": "Patient",
+      "attributes": [
+        "relationship_type",
+        "genetic_relation",
+        "lives_with_patient",
+        "contact_permission"
+      ]
+    },
+    "dispenses": {
+      "subject_type": "Pharmacy",
+      "object_type": "Medication",
+      "attributes": [
+        "dispense_date",
+        "quantity_dispensed",
+        "days_supply",
+        "refills_remaining",
+        "substitution_made",
+        "pharmacist_id",
+        "patient_instructions"
+      ]
+    },
+    "manages": {
+      "subject_type": "Provider",
+      "object_type": "Patient",
+      "attributes": [
+        "relationship_start_date",
+        "relationship_type",
+        "primary_care",
+        "last_visit_date",
+        "next_scheduled_visit_date"
+      ]
+    },
+    "supervises": {
+      "subject_type": "Provider",
+      "object_type": "Provider",
+      "attributes": [
+        "supervision_start_date",
+        "supervision_type",
+        "notes"
+      ]
+    },
+    "interacts_with": {
+      "subject_type": "Medication",
+      "object_type": "Medication",
+      "attributes": [
+        "interaction_severity",
+        "interaction_description",
+        "recommended_action",
+        "evidence_level"
+      ]
+    },
+    "contraindicates": {
+      "subject_type": ["Diagnosis", "Allergy"],
+      "object_type": ["Medication", "Procedure", "MedicalDevice"],
+      "attributes": [
+        "contraindication_severity",
+        "contraindication_description",
+        "alternative_suggestion",
+        "override_conditions"
+      ]
+    },
+    "has_social_determinant": {
+      "subject_type": "Patient",
+      "object_type": "SocialDeterminant",
+      "attributes": [
+        "identified_date",
+        "identified_by",
+        "current_status",
+        "intervention_plan",
+        "follow_up_date"
+      ]
+    },
+    "authorizes": {
+      "subject_type": "InsurancePlan",
+      "object_type": ["Procedure", "MedicalDevice", "Medication"],
+      "attributes": [
+        "authorization_date",
+        "authorization_number",
+        "authorized_quantity",
+        "authorized_visits",
+        "expiration_date",
+        "restrictions",
+        "patient_responsibility"
+      ]
+    },
+    "bills": {
+      "subject_type": "Provider",
+      "object_type": ["InsurancePlan", "Patient"],
+      "attributes": [
+        "service_date",
+        "billing_date",
+        "amount_billed",
+        "amount_allowed",
+        "amount_paid",
+        "denial_reason",
+        "claim_number",
+        "billing_code",
+        "payment_status"
+      ]
+    },
+    "includes": {
+      "subject_type": "CarePlan",
+      "object_type": ["Medication", "Procedure", "LabTest", "MedicalDevice"],
+      "attributes": [
+        "inclusion_date",
+        "reason",
+        "frequency",
+        "duration",
+        "priority",
+        "instructions"
+      ]
+    },
+    "records": {
+      "subject_type": "Encounter",
+      "object_type": ["Diagnosis", "Procedure", "LabTest"],
+      "attributes": [
+        "record_date",
+        "recorded_by_id",
+        "notes"
+      ]
+    },
+    "schedules": {
+      "subject_type": ["Patient", "Provider"],
+      "object_type": ["Encounter", "Procedure", "LabTest"],
+      "attributes": [
+        "scheduled_date",
+        "scheduled_by",
+        "reason",
+        "priority",
+        "preparation_instructions",
+        "notes"
+      ]
+    },
+    "impacts": {
+      "subject_type": ["Diagnosis", "SocialDeterminant"],
+      "object_type": ["CarePlan", "Medication"],
+      "attributes": [
+        "impact_type",
+        "severity",
+        "modification_required",
+        "notes"
+      ]
+    },
+    "escalates_to": {
+      "subject_type": "Provider",
+      "object_type": "Provider",
+      "attributes": [
+        "escalation_criteria",
+        "response_timeframe",
+        "escalation_protocol",
+        "communication_channel"
+      ]
+    }
+  }
+}
