@@ -1,0 +1,236 @@
+{
+    "_": {
+        "editor": {
+            "view": {
+                "view-store-zoom": false,
+                "view-store-position": false,
+                "view-show-grid": true,
+                "view-snap-grid": true,
+                "view-grid-size": 20,
+                "view-node-status": true,
+                "view-node-show-label": true,
+                "view-show-tips": true,
+                "view-show-welcome-tours": true
+            },
+            "tours": {
+                "welcome": "4.0.9"
+            },
+            "dialog": {
+                "export": {
+                    "pretty": true,
+                    "json-view": true
+                }
+            }
+        },
+        "menu-menu-item-sidebar": false,
+        "debug": {
+            "filter": "filterAll"
+        },
+        "menu-menu-item-palette": false,
+        "edgeConditions": {
+            "37562b0e1c1b8177:0:1326fb1765579cc5": {
+                "enabled": true,
+                "useTriplets": true,
+                "logic": "and",
+                "conditions": [
+                    {
+                        "subject": "",
+                        "field": "",
+                        "object": "",
+                        "operator": "eq",
+                        "value": ""
+                    },
+                    {
+                        "subject": "",
+                        "field": "",
+                        "object": "",
+                        "operator": "eq",
+                        "value": ""
+                    },
+                    {
+                        "subject": "",
+                        "field": "",
+                        "object": "",
+                        "operator": "eq",
+                        "value": ""
+                    }
+                ]
+            },
+            "bacddafb6f6e58bd:0:70d66f0842863ce9": {
+                "enabled": true,
+                "useTriplets": true,
+                "logic": "and",
+                "conditions": [
+                    {
+                        "subject": "",
+                        "field": "",
+                        "object": "",
+                        "operator": "eq",
+                        "value": ""
+                    }
+                ],
+                "prompt": {
+                    "conditions": [
+                        "this is a new prompt"
+                    ]
+                },
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "Patient",
+                            "predicate": "schedules",
+                            "object": "LabTest",
+                            "operator": "eq",
+                            "value": "true"
+                        }
+                    ]
+                }
+            },
+            "abbdb244c5de8948:0:0247fba16a2f48d5": {
+                "enabled": false,
+                "logical": {
+                    "logic": "and",
+                    "conditions": []
+                },
+                "prompt": {
+                    "conditions": [
+                        "this is new please be succesffulll my god prompt"
+                    ]
+                },
+                "valueType": "str",
+                "value": "",
+                "operator": "eq",
+                "property": "payload"
+            },
+            "04529efb83af0dd3:0:c3f8e1d1c3aa3538": {
+                "enabled": false,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "Allergy",
+                            "predicate": "contraindicates",
+                            "object": "Procedure",
+                            "operator": "eq",
+                            "value": "value1"
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "Prompt 1"
+                    ]
+                },
+                "valueType": "str",
+                "value": "",
+                "operator": "eq",
+                "property": "payload"
+            },
+            "04529efb83af0dd3:0:399d69a9db72e8af": {
+                "enabled": false,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "FamilyMember",
+                            "predicate": "is_family_member_of",
+                            "object": "Patient",
+                            "operator": "eq",
+                            "value": "sham"
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "kkdd infiwd"
+                    ]
+                },
+                "valueType": "str",
+                "value": "",
+                "operator": "eq",
+                "property": "payload"
+            },
+            "c3f8e1d1c3aa3538:0:cf9c8d506bfbdfdf": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "InsurancePlan",
+                            "predicate": "authorizes",
+                            "object": "MedicalDevice",
+                            "operator": "eq",
+                            "value": "\"x-ray\""
+                        },
+                        {
+                            "subject": "Pharmacy",
+                            "predicate": "dispenses",
+                            "object": "Medication",
+                            "operator": "eq",
+                            "value": "\"para\""
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "This is a prompt for ... node 4",
+                        "Second prompt for node 4"
+                    ]
+                }
+            },
+            "3654b480b205a3ae:0:1af2de00c36e4e46": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "Patient",
+                            "predicate": "requests_appointment_with",
+                            "object": "doctorName",
+                            "operator": "eq",
+                            "value": "\"john\""
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "user has confirm their name and made a choise."
+                    ]
+                }
+            },
+            "1af2de00c36e4e46:0:9df2a0f82c2d40cf": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": []
+                },
+                "prompt": {
+                    "conditions": [
+                        "All the information is received from user."
+                    ]
+                }
+            },
+            "0765442809a3664d:0:278fc5e10696b8dc": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "InsurancePlan",
+                            "predicate": "authorizes",
+                            "object": "MedicalDevice",
+                            "operator": "endsWith",
+                            "value": "snd"
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "This is a prompt"
+                    ]
+                }
+            }
+        }
+    }
+}

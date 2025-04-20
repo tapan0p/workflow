@@ -1,0 +1,116 @@
+[
+    {
+        "id": "99ea7ef68715bf6a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a24d66a860074c76",
+        "type": "unit-node",
+        "name": "node 1",
+        "z": "99ea7ef68715bf6a",
+        "x": 450,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "payload": "",
+        "topic": "booking",
+        "prompt": "Prompt for node 1",
+        "objective": "Objective for node 1",
+        "hasBeenSaved": true,
+        "templates": [
+            {
+                "subject": "Provider",
+                "predicate": "supervises",
+                "object": "Provider",
+                "enableStorage": false
+            }
+        ],
+        "functions": [
+            {
+                "name": "Text Analyzer",
+                "code": "'''\nAnalyze text and return various statistics\n\nParameters\n----------\ntext : str\n    The input text to analyze\n\nReturns\n-------\ndict\n    Dictionary containing text statistics like word count, char count, letter frequency\n'''\ndef analyze_text(text):\n    '''Analyze text for various metrics'''\n    # Placeholder implementation\n    if not text: return {'word_count': 0, 'char_count': 0, 'letter_frequency': {}}\n    words = text.split()\n    word_count = len(words)\n    char_count = len(text)\n    letter_frequency = {}\n    for char in text.lower():\n        if char.isalpha():\n            letter_frequency[char] = letter_frequency.get(char, 0) + 1\n    return {'word_count': word_count, 'char_count': char_count, 'letter_frequency': letter_frequency} # Actual implementation from example kept\n\n# Example usage\n# sample_text = 'Hello world, this is a sample text.'\n# result = analyze_text(sample_text)\n# print(result)"
+            },
+            {
+                "name": "Find Max in List",
+                "code": "'''\nFind the maximum element in a list of numbers\n\nParameters\n----------\nnumbers : list[int | float]\n    The list of numbers\n\nReturns\n-------\nint | float\n    The maximum number in the list\n'''\ndef find_max(numbers):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(find_max([1, 5, 2, 9, 3]))"
+            }
+        ],
+        "inputs": 1,
+        "outputs": 1
+    },
+    {
+        "id": "cb221c66232e90c2",
+        "type": "unit-node",
+        "name": "node 2",
+        "z": "99ea7ef68715bf6a",
+        "x": 790,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "payload": "",
+        "topic": "booking",
+        "prompt": "Prompt for node 2",
+        "objective": "Objective for node 2",
+        "hasBeenSaved": true,
+        "templates": [
+            {
+                "subject": "Provider",
+                "predicate": "schedules",
+                "object": "LabTest",
+                "enableStorage": false
+            },
+            {
+                "subject": "InsurancePlan",
+                "predicate": "authorizes",
+                "object": "MedicalDevice",
+                "enableStorage": false
+            }
+        ],
+        "functions": [
+            {
+                "name": "Calculate Factorial",
+                "code": "'''\nCalculate the factorial of a non-negative integer\n\nParameters\n----------\nn : int\n    The non-negative integer\n\nReturns\n-------\nint\n    The factorial of n (n!)\n'''\ndef factorial(n):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(factorial(5))"
+            },
+            {
+                "name": "Remove Duplicates from List",
+                "code": "'''\nRemove duplicate elements from a list while preserving order\n\nParameters\n----------\ndata : list\n    The list containing potential duplicates\n\nReturns\n-------\nlist\n    A new list with duplicates removed\n'''\ndef remove_duplicates(data):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(remove_duplicates([1, 2, 2, 3, 1, 4, 4]))"
+            },
+            {
+                "name": "Check Leap Year",
+                "code": "'''\nCheck if a given year is a leap year\n\nParameters\n----------\nyear : int\n    The year to check\n\nReturns\n-------\nbool\n    True if the year is a leap year, False otherwise\n'''\ndef is_leap_year(year):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(is_leap_year(2020))\n# print(is_leap_year(2021))"
+            },
+            {
+                "name": "Flatten List",
+                "code": "'''\nFlatten a list of lists into a single list\n\nParameters\n----------\nnested_list : list[list]\n    The list containing sublists\n\nReturns\n-------\nlist\n    A single list containing all elements from the sublists\n'''\ndef flatten_list(nested_list):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(flatten_list([[1, 2], [3, 4], [5]]))"
+            },
+            {
+                "name": "Check File Existence",
+                "code": "'''\nCheck if a file or directory exists at the specified path\n\nParameters\n----------\npath : str\n    The file or directory path to check\n\nReturns\n-------\nbool\n    True if the path exists, False otherwise\n'''\ndef check_path_exists(path):\n    # Placeholder function definition\n    # import os\n    # return os.path.exists(path)\n    pass\n\n# Example usage (placeholder)\n# print(check_path_exists('myfile.txt'))"
+            },
+            {
+                "name": "Calculate Date Difference",
+                "code": "'''\nCalculate the difference between two datetime objects\n\nParameters\n----------\ndate1 : datetime\n    The first datetime object\ndate2 : datetime\n    The second datetime object\n\nReturns\n-------\ntimedelta\n    A timedelta object representing the difference between date1 and date2\n'''\ndef calculate_date_difference(date1, date2):\n    # Placeholder function definition\n    # return date1 - date2\n    pass\n\n# Example usage (placeholder)\n# import datetime\n# d1 = datetime.datetime(2023, 10, 27)\n# d2 = datetime.datetime(2023, 10, 20)\n# print(calculate_date_difference(d1, d2))"
+            },
+            {
+                "name": "Convert Decimal to Binary",
+                "code": "'''\nConvert a non-negative decimal integer to its binary string representation\n\nParameters\n----------\ndecimal_num : int\n    The non-negative decimal integer\n\nReturns\n-------\nstr\n    The binary representation as a string (e.g., '1011')\n'''\ndef decimal_to_binary(decimal_num):\n    # Placeholder function definition\n    # return bin(decimal_num)[2:]\n    pass\n\n# Example usage (placeholder)\n# print(decimal_to_binary(11))"
+            },
+            {
+                "name": "Calculate Standard Deviation",
+                "code": "'''\nCalculate the population standard deviation of a list of numbers\n\nParameters\n----------\nnumbers : list[int | float]\n    The list of numbers (population)\n\nReturns\n-------\nfloat\n    The population standard deviation\n'''\ndef calculate_std_dev(numbers):\n    # Placeholder function definition\n    # import statistics\n    # return statistics.pstdev(numbers)\n    pass\n\n# Example usage (placeholder)\n# print(calculate_std_dev([1, 2, 3, 4, 5]))"
+            },
+            {
+                "name": "Generate Slug",
+                "code": "'''\nGenerate a URL-friendly slug from a string (lowercase, spaces to hyphens, remove invalid chars)\n\nParameters\n----------\ntext : str\n    The input string\n\nReturns\n-------\nstr\n    The generated slug string\n'''\ndef generate_slug(text):\n    # Placeholder function definition\n    pass\n\n# Example usage (placeholder)\n# print(generate_slug('This is a Test Title!'))"
+            }
+        ],
+        "inputs": 1,
+        "outputs": 1
+    }
+]
