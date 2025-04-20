@@ -210,6 +210,26 @@
                         "All the information is received from user."
                     ]
                 }
+            },
+            "0765442809a3664d:0:278fc5e10696b8dc": {
+                "enabled": true,
+                "logical": {
+                    "logic": "and",
+                    "conditions": [
+                        {
+                            "subject": "InsurancePlan",
+                            "predicate": "authorizes",
+                            "object": "MedicalDevice",
+                            "operator": "endsWith",
+                            "value": "snd"
+                        }
+                    ]
+                },
+                "prompt": {
+                    "conditions": [
+                        "This is a prompt"
+                    ]
+                }
             }
         }
     }
